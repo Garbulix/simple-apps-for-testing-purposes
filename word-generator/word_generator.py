@@ -19,13 +19,9 @@ def generate_word(length):
         previous_letter = 'consonant' if (previous_letter == 'vowel') else 'vowel'
     return generated_word
 
-def generate_word_list(no_of_words, min_chars_in_word, max_chars_in_word):
+def generate_word_list(no_of_words, min_word_length, max_word_length):
     random.seed()
     words_list = []
     for x in range(no_of_words):
-        words_list.append(generate_word(random.randint(min_chars_in_word, max_chars_in_word)))
+        words_list.append(generate_word(random.randint(min_word_length, max_word_length)))
     return words_list
-
-# ===================================
-
-print(generate_word_list(5, 4, 8))
