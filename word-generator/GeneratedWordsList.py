@@ -11,6 +11,6 @@ class GeneratedWordsList():
             print(word)
     
     def save_to_file(self, path):
-        with open(path, 'w') as new_words_file:
+        with open(path, 'w') as words_file:
             for word in self.words_list:
-                new_words_file.write(word+'\n')
+                words_file.write(word+'\n')
